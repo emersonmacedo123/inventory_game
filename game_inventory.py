@@ -3,11 +3,19 @@
 # Write code in the functions (and create new functions) so that they work
 # according to the requirements.
 
+#testing inventory
+myInventory = {}
+myInventory["Key1"] = 2
+myInventory["Key2"] = 3
+myInventory["Key3"] = 75
+
+
+
 
 def display_inventory(inventory):
     """Display the contents of the inventory in a simple way."""
-    pass
-
+    for key, value in inventory.items():
+        print(f"{key}: {value}")
 
 def add_to_inventory(inventory, added_items):
     """Add to the inventory dictionary a list of items from added_items."""
