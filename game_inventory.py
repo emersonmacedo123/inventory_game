@@ -21,22 +21,23 @@ def add_to_inventory(inventory, added_items):
     """Add to the inventory dictionary a list of items from added_items."""
     for item in added_items:
         if item in inventory.keys():
-            print ("Hello")
             inventory[item] += 1
         else:
             inventory[item] = 1
     return inventory
 
-added = ["Key5"]
-
-add_to_inventory(myInventory, added)
-            
-
-
 def remove_from_inventory(inventory, removed_items):
     """Remove from the inventory dictionary a list of items from removed_items."""
-    pass
+    for item in removed_items:
+        if item in inventory.keys():
+            inventory[item] -= 1
+            if inventory[item] <= 0:
+                inventory.pop(item)
+    return inventory
 
+list = ["Key9"]
+remove_from_inventory(myInventory, list)
+display_inventory(myInventory)
 
 def print_table(inventory, order):
     """
